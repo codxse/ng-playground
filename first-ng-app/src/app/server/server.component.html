@@ -1,0 +1,19 @@
+<h1>Zehahaha</h1>
+<p>ServerID: {{ serverId }}</p>
+<p>ServerStatus: {{ serverStatus }}</p>
+<button [disabled]="allowNewServer">Server</button>
+<button (click)="setDisabled()" >Disable button</button>
+
+<p>{{ text }}</p>
+<input type="text" (input)="onChangeText($event)"/>
+
+<!--Two ways data binding-->
+
+<input type="text" [(ngModel)]="text" />
+
+<h1>{{ username }}</h1>
+<input [(ngModel)]="username" type="text"/>
+<button [disabled]="!username" (click)="appendUsername()">Add Username Below</button>
+<ul *ngFor="let username of usernames">
+  <li>{{ username }}</li>
+</ul>
